@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from 'victory';
 
 const data = [
     {quarter: 1, earnings: 13000},
@@ -18,8 +18,11 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <h1>Victory Tutorial</h1>
-                <VictoryChart domainPadding={8}>
+                <h1>Victory Charts</h1>
+                <VictoryChart
+                    domainPadding={8}
+                    theme={VictoryTheme.material}
+                >
                     <VictoryAxis
                         // tickValues specifies both the number of ticks and where
                         // they are placed on the axis
